@@ -56,10 +56,4 @@ The core logic is implemented in [ShowMoreBehavior.cs](./CS/ShowMoreBehavior.cs)
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-support-showmore-button-in-comboboxedit-with-tokens&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-support-showmore-button-in-comboboxedit-with-tokens&~~~was_helpful=no)
 
 (you will be redirected to DevExpress.com to submit your response)
-<!-- feedback -->
-## Does This Example Address Your Development Requirements/Objectives?
-
-[<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-support-showmore-button-in-comboboxedit-with-tokens&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-support-showmore-button-in-comboboxedit-with-tokens&~~~was_helpful=no)
-
-(you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
