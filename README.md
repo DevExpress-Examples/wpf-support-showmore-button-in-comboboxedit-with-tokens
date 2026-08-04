@@ -7,15 +7,15 @@
 
 # WPF ComboBoxEdit — Add a "Show More" Button to Reveal All Selected Tokens
 
-This example attaches a reusable behavior to a [ComboBoxEdit](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.ComboBoxEdit) that displays selected items as tokens. If the selected tokens do not fit in the editor's input box, the behavior displays a **Show More**/**Show Less** toggle button that expands or collapses the editor.
+This example attaches a reusable behavior to our WPF [ComboBoxEdit](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.ComboBoxEdit). It displays selected items as tokens. If selected tokens do not fit within the editor's input box, the behavior displays a **Show More**/**Show Less** toggle button that expands or collapses the editor.
 
 ![WPF ComboBoxEdit with a Show More button, DevExpress](Images/show-more-button.png)
 
 ## Overview
 
-The `ComboBoxEdit` control in this example uses [CheckedTokenComboBoxStyleSettings](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.CheckedTokenComboBoxStyleSettings) to render selected values as tokens. If the tokens do not fit in the input box, the editor increases its height and displays a scrollbar by default. The `ShowMoreBehavior` provides an alternative user experience: it keeps the editor at a fixed height and displays a toggle button that allows users to show all tokens on demand.
+The WPF `ComboBoxEdit` control in this example uses [CheckedTokenComboBoxStyleSettings](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.CheckedTokenComboBoxStyleSettings) to render selected values as tokens. If tokens do not fit within the input box, the editor increases its height and displays a scrollbar by default. The `ShowMoreBehavior` provides an alternative user experience: it maintains editor height (fixed) and displays a toggle button allowing users to display all tokens on demand.
 
-The `ShowMoreBehavior` is self-contained and MVVM-friendly. You can attach it to any token-based `ComboBoxEdit` and set `CollapsedHeight`:
+The `ShowMoreBehavior` is both self-contained and MVVM-friendly. You can attach it to any token-based `ComboBoxEdit` and set `CollapsedHeight`:
 
 ```xml
 <dxe:ComboBoxEdit ItemsSource="{Binding AvailableRoles}"
@@ -29,11 +29,11 @@ The `ShowMoreBehavior` is self-contained and MVVM-friendly. You can attach it to
 
 ## Implementation Details
 
-The core logic is implemented in [ShowMoreBehavior.cs](./CS/ShowMoreBehavior.cs). The class makes the following adjustments to `ComboBoxEdit` functionality:
+The core logic is implemented in [ShowMoreBehavior.cs](./CS/ShowMoreBehavior.cs). The class modifies the following:
 
-- **Token wrapping** — applies `CheckedTokenComboBoxStyleSettings` and enables `EnableTokenWrapping` to display selected values as tokens arranged on multiple lines.
-- **Show More/Show Less button** — adds an editor button to `ComboBoxEdit.Buttons`. The button toggles the editor height (`ComboBoxEdit.MaxHeight`) and its own caption between "Show More" and "Show Less".
-- **Button visibility** — binds the inner `ScrollViewer.ScrollableHeight` and displays the button only when the tokens overflow the collapsed editor (`ScrollableHeight > 0`) or the editor is expanded.
+- **Token wrapping** — applies `CheckedTokenComboBoxStyleSettings` and enables `EnableTokenWrapping` to display selected values as tokens arranged across multiple lines.
+- **Show More/Show Less button** — adds an editor button to `ComboBoxEdit.Buttons`. The button toggles editor height (`ComboBoxEdit.MaxHeight`) and its own caption between "Show More" and "Show Less".
+- **Button visibility** — binds the inner `ScrollViewer.ScrollableHeight` and displays the button only when tokens overflow the collapsed editor (`ScrollableHeight > 0`) or the editor is expanded.
 
 ### Files to Review
 
